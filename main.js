@@ -18,6 +18,7 @@ noseX=0;
 noseY=0;
 leftWrist=0;
 rightWrist=0;
+difference=0;
 
 function gotPoses(results)
 {
@@ -29,12 +30,15 @@ function gotPoses(results)
 
         leftWrist = results[0].pose.leftWrist.x;
         rightWrist = results[0].pose.rightWrist.x;
-        console.log('nose X= ' + noseX + 'noseY = ' + noseY);        
+        console.log('nose X= ' + noseX + 'noseY = ' + noseY);  
+        difference = floor(rightWrist - leftWrist);
     }
 }
 function draw()
 {
     background('#969A97');
     fill('red');
-    stroke('black');    
+    stroke('black');  
+    textSize(difference);
+    text('krishna', noseX, noseY );  
 }
