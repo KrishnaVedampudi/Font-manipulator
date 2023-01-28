@@ -31,6 +31,7 @@ function gotPoses(results)
         leftWrist = results[0].pose.leftWrist.x;
         rightWrist = results[0].pose.rightWrist.x;
         console.log('nose X= ' + noseX + 'noseY = ' + noseY);  
+        console.log("Left wrist location: " + leftWrist + "Right Wrist Location: " + rightWrist);
         difference = floor(rightWrist - leftWrist);
     }
 }
